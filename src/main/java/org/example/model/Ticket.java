@@ -1,12 +1,6 @@
 package org.example.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.JoinColumn;
-import javax.persistence.Column;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
@@ -31,7 +25,7 @@ public class Ticket {
     @JoinColumn(name = "to_planet_id", nullable = false)
     private Planet toPlanet;
 
-    // Constructors, getters, and setters
+
     public Ticket() {}
 
     public Ticket(LocalDateTime createdAt, Client client, Planet fromPlanet, Planet toPlanet) {
